@@ -14,7 +14,7 @@ namespace webmarks.nancy
         {
             base.ConfigureConventions(nancyConventions);
 
-            //Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/", @"public"));
+            Conventions.StaticContentsConventions.Add(StaticContentConventionBuilder.AddDirectory("/", @"Content"));
         }
 
         protected override void ConfigureApplicationContainer(TinyIoCContainer container)
