@@ -22,8 +22,12 @@ namespace webmarks.nancy
             base.ConfigureApplicationContainer(container);
 
             //var connString = "mongodb://localhost:27017";
-            //var connString = Environment.GetEnvironmentVariable("MONGOLAB_URI");
-            var connString = ConfigurationManager.AppSettings.Get("MONGOLAB_URI");
+            var connString = Environment.GetEnvironmentVariable("MONGOLAB_URI");
+            if(connString == null)
+            {
+                connString = ConfigurationManager.AppSettings.Get("MONGOLAB_URI");
+            }
+
             var databaseName = "speakersdb";
 
             var mongoClient = new MongoClient(connString);
