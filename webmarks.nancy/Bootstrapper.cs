@@ -28,7 +28,8 @@ namespace webmarks.nancy
                 connString = ConfigurationManager.AppSettings.Get("MONGOLAB_URI");
             }
 
-            var databaseName = "speakersdb";
+            //var databaseName = "speakersdb";
+            var databaseName = "appharbor_pq17xkjp";
 
             var mongoClient = new MongoClient(connString);
 
