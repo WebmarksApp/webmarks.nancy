@@ -6,7 +6,14 @@ namespace webmarks.nancy.Modules
     {
         public IndexModule()
         {
-            Get["/"] = _ => View["index"];
+            Get["/"] = Index;
+
+            Get["/api"] = Index;
+        }
+
+        private dynamic Index(dynamic parameters)
+        {
+            return Response.AsFile("Content/index.html", "text/html");
         }
     }
 }
