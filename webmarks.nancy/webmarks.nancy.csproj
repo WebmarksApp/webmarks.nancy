@@ -91,7 +91,9 @@
   <ItemGroup>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Models\Speaker.cs" />
+    <Compile Include="Models\UrlContent.cs" />
     <Compile Include="Modules\IndexModule.cs" />
+    <Compile Include="Modules\ParserModule.cs" />
     <Compile Include="Modules\SpeakersModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

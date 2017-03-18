@@ -7,8 +7,8 @@ namespace webmarks.nancy.Models
     {
         public Speaker()
         {
-
         }
+
         public Speaker(string firstname, string lastname, string session, string image)
         {
             this.firstname = firstname;

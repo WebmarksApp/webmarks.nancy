@@ -33,13 +33,15 @@ namespace webmarks.nancy
 
             var mongoClient = new MongoClient(connString);
 
-            //MongoServer server = mongoClient.GetServer();
             var database = mongoClient.GetDatabase(databaseName);
 
-            var collection = database.GetCollection<Speaker>("speakers");
+            var speakersCollection = database.GetCollection<Speaker>("speakers");
+
+            var contentCollection = database.GetCollection<UrlContent>("contents");
 
             container.Register(database);
-            container.Register(collection);
+            container.Register(speakersCollection);
+            container.Register(contentCollection);
         }
     }
 }
